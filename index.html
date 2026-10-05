@@ -1,0 +1,2661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aiyra Organics — Premium Hair & Skin Care</title>
+  <meta name="description" content="Aiyra organics — premium herbal beauty and wellness products.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root {
+      --forest: #214536;
+      --forest2: #2e5b46;
+      --sage: #dfe9df;
+      --cream: #f8f5ee;
+      --sand: #eee7d8;
+      --ink: #202722;
+      --muted: #68726b;
+      --white: #fff;
+      --gold: #b28a4b;
+      --line: #e6e0d4;
+      --shadow: 0 18px 50px rgba(33, 69, 54, .12);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #fff;
+      font-family: "DM Sans", Arial, sans-serif
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    button,
+    input,
+    select {
+      font: inherit
+    }
+
+    .announcement {
+      height: 38px;
+      background: var(--forest);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      letter-spacing: .3px
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(255, 255, 255, .96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line)
+    }
+
+    .nav {
+      height: 76px;
+      max-width: 1240px;
+      margin: auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 27px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      color: var(--forest)
+    }
+
+    .logo small {
+      display: block;
+      font: 600 8px "DM Sans";
+      letter-spacing: 3px;
+      text-align: center;
+      color: var(--gold);
+      margin-top: -2px
+    }
+
+    .menu {
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+      color: #39453e
+    }
+
+    .menu a {
+      padding: 29px 0;
+      position: relative
+    }
+
+    .menu a:hover,
+    .menu a.active {
+      color: var(--forest)
+    }
+
+    .menu a.active:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 20px;
+      height: 2px;
+      background: var(--gold)
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+      border: 0;
+      background: transparent;
+      border-radius: 50%;
+      cursor: pointer;
+      color: var(--forest);
+      font-size: 19px;
+      position: relative
+    }
+
+    .icon-btn:hover {
+      background: var(--sage)
+    }
+
+    .badge {
+      position: absolute;
+      right: 3px;
+      top: 1px;
+      background: var(--gold);
+      color: #fff;
+      font-size: 9px;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center
+    }
+
+    .mobile-toggle {
+      display: none
+    }
+
+    .hero {
+      background: linear-gradient(110deg, #edf3e9 0%, #f8f5ee 54%, #e8eee5 100%);
+      min-height: 590px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center
+    }
+
+    .hero-copy {
+      max-width: 1240px;
+      width: 100%;
+      margin: auto;
+      padding: 80px 24px;
+      grid-column: 1/3;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 50px
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--gold);
+      font-weight: 700
+    }
+
+    .hero h1 {
+      font: 600 clamp(42px, 5vw, 68px)/1.05 "Playfair Display", serif;
+      color: var(--forest);
+      margin: 15px 0 20px;
+      max-width: 600px
+    }
+
+    .hero p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 540px
+    }
+
+    .ctas {
+      display: flex;
+      gap: 12px;
+      margin-top: 28px
+    }
+
+    .btn {
+      border: 1px solid var(--forest);
+      border-radius: 28px;
+      padding: 13px 23px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .btn.primary {
+      background: var(--forest);
+      color: #fff
+    }
+
+    .btn.primary:hover {
+      background: #17372a
+    }
+
+    .btn.light {
+      background: #fff;
+      color: var(--forest);
+      border-color: #d4d0c5
+    }
+
+    .hero-art {
+      height: 410px;
+      border-radius: 32px;
+      background: radial-gradient(circle at 35% 28%, #fff 0 10%, transparent 11%), linear-gradient(145deg, #d6e3d4, #f2eee4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative
+    }
+
+    .bottle {
+      width: 190px;
+      height: 275px;
+      background: linear-gradient(90deg, #315b47, #204535);
+      border-radius: 26px 26px 34px 34px;
+      position: relative;
+      box-shadow: 0 30px 45px rgba(28, 55, 42, .25)
+    }
+
+    .bottle:before {
+      content: "";
+      position: absolute;
+      width: 92px;
+      height: 42px;
+      background: #c6a469;
+      left: 49px;
+      top: -38px;
+      border-radius: 9px 9px 4px 4px
+    }
+
+    .label {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      top: 95px;
+      height: 112px;
+      background: #f5f0e4;
+      border-radius: 4px;
+      text-align: center;
+      padding: 18px 7px;
+      color: var(--forest);
+      font-family: "Playfair Display"
+    }
+
+    .label b {
+      display: block;
+      font-size: 17px
+    }
+
+    .label span {
+      font: 8px "DM Sans";
+      letter-spacing: 2px;
+      color: var(--gold)
+    }
+
+    .section {
+      max-width: 1240px;
+      margin: auto;
+      padding: 78px 24px
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 30px
+    }
+
+    .section h2 {
+      font: 600 38px "Playfair Display";
+      color: var(--forest);
+      margin: 6px 0
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 14px
+    }
+
+    .link {
+      color: var(--forest);
+      font-weight: 700;
+      font-size: 13px
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px
+    }
+
+    .cat {
+      min-height: 180px;
+      border-radius: var(--radius);
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      position: relative;
+      overflow: hidden;
+      color: var(--forest);
+      background: var(--sage)
+    }
+
+    .cat:nth-child(2) {
+      background: #eee4d3
+    }
+
+    .cat:nth-child(3) {
+      background: #e8e2ee
+    }
+
+    .cat:nth-child(4) {
+      background: #e8ede4
+    }
+
+    .cat .shape {
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      right: -20px;
+      top: -25px;
+      background: rgba(255, 255, 255, .45)
+    }
+
+    .cat strong {
+      font: 600 24px "Playfair Display";
+      position: relative
+    }
+
+    .cat span {
+      font-size: 12px;
+      color: var(--muted);
+      position: relative;
+      margin-top: 5px
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px
+    }
+
+    .product {
+      position: relative
+    }
+
+    .product-img {
+      height: 285px;
+      background: #f1eee5;
+      border-radius: 17px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden
+    }
+
+    .product-img.green {
+      background: #e4ece2
+    }
+
+    .product-img.pink {
+      background: #f1e4e2
+    }
+
+    .product-img.lilac {
+      background: #e9e5ef
+    }
+
+    .mini-bottle {
+      width: 100px;
+      height: 145px;
+      border-radius: 14px 14px 20px 20px;
+      background: #335c48;
+      box-shadow: 0 18px 30px rgba(0, 0, 0, .14);
+      position: relative
+    }
+
+    .mini-bottle:before {
+      content: "";
+      position: absolute;
+      left: 27px;
+      top: -23px;
+      width: 46px;
+      height: 25px;
+      background: #b4945b;
+      border-radius: 5px
+    }
+
+    .cart-fallback .mini-bottle:before {
+      left: 27px;
+    }
+
+    .mini-label {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      top: 51px;
+      height: 54px;
+      background: #f6f0e4;
+      text-align: center;
+      padding-top: 9px;
+      font: 600 9px "Playfair Display";
+      color: var(--forest)
+    }
+
+    .wish {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 0;
+      background: #fff;
+      box-shadow: 0 5px 15px #0001;
+      cursor: pointer
+    }
+
+    .wish.liked {
+      color: #b44b4b
+    }
+
+    .product-info {
+      padding: 13px 3px
+    }
+
+    .product-info .catname {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: var(--gold);
+      font-weight: 700
+    }
+
+    .product-info h3 {
+      font: 600 19px "Playfair Display";
+      margin: 5px 0;
+      color: var(--forest)
+    }
+
+    .price {
+      font-weight: 700
+    }
+
+    .old {
+      text-decoration: line-through;
+      color: #9a9f9a;
+      font-weight: 400;
+      margin-left: 7px
+    }
+
+    .rating {
+      font-size: 11px;
+      color: #a47b37;
+      margin-top: 5px
+    }
+
+    .banner {
+      background: var(--forest);
+      color: #fff
+    }
+
+    .banner-inner {
+      max-width: 1240px;
+      margin: auto;
+      padding: 62px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px
+    }
+
+    .banner h2 {
+      font: 600 34px "Playfair Display";
+      margin: 0 0 8px
+    }
+
+    .banner p {
+      margin: 0;
+      color: #d9e5dd;
+      font-size: 14px
+    }
+
+    .banner .btn {
+      background: #fff;
+      color: var(--forest);
+      border-color: #fff
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center
+    }
+
+    .about-card {
+      background: var(--cream);
+      border-radius: 28px;
+      padding: 55px
+    }
+
+    .about h2 {
+      font: 600 40px "Playfair Display";
+      color: var(--forest);
+      margin: 8px 0 18px
+    }
+
+    .about p {
+      line-height: 1.85;
+      color: var(--muted);
+      font-size: 14px
+    }
+
+    .points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 28px
+    }
+
+    .point strong {
+      display: block;
+      color: var(--forest);
+      margin-bottom: 5px
+    }
+
+    .point span {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.6
+    }
+
+    .about-visual {
+      min-height: 390px;
+      border-radius: 28px;
+      background: linear-gradient(145deg, #dbe8dc, #f3eee2);
+      display: grid;
+      place-items: center
+    }
+
+    .newsletter {
+      background: #f2eee4;
+      text-align: center;
+      padding: 75px 24px
+    }
+
+    .newsletter h2 {
+      font: 600 38px "Playfair Display";
+      color: var(--forest);
+      margin: 0 0 10px
+    }
+
+    .newsletter p {
+      color: var(--muted);
+      font-size: 14px
+    }
+
+    .form {
+      display: flex;
+      max-width: 510px;
+      margin: 24px auto 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 5px
+    }
+
+    .form input {
+      border: 0;
+      outline: 0;
+      padding: 11px 15px;
+      flex: 1;
+      background: transparent
+    }
+
+    .form button {
+      border: 0;
+      border-radius: 25px;
+      background: var(--forest);
+      color: #fff;
+      padding: 11px 20px;
+      font-weight: 700;
+      cursor: pointer
+    }
+
+    footer {
+      background: #17372a;
+      color: #dce8df;
+      padding: 55px 24px 25px
+    }
+
+    .footer-grid {
+      max-width: 1240px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px
+    }
+
+    .footer-logo {
+      font: 700 25px "Playfair Display";
+      color: #fff
+    }
+
+    .footer p {
+      font-size: 12px;
+      line-height: 1.8;
+      color: #b9c9be;
+      max-width: 340px
+    }
+
+    .footer h4 {
+      color: #fff;
+      margin: 0 0 15px
+    }
+
+    .footer a {
+      display: block;
+      font-size: 12px;
+      color: #b9c9be;
+      margin: 9px 0
+    }
+
+    .copyright {
+      max-width: 1240px;
+      margin: 35px auto 0;
+      border-top: 1px solid #426151;
+      padding-top: 18px;
+      font-size: 11px;
+      color: #9fb1a5
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: #0008;
+      z-index: 60;
+      display: none
+    }
+
+    .overlay.open {
+      display: block
+    }
+
+    .drawer {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: min(430px, 94vw);
+      background: #fff;
+      padding: 25px;
+      overflow: auto
+    }
+
+    .drawer h2 {
+      font: 600 28px "Playfair Display";
+      color: var(--forest);
+      margin: 0 0 20px
+    }
+
+    .close {
+      float: right;
+      border: 0;
+      background: transparent;
+      font-size: 26px;
+      cursor: pointer
+    }
+
+    .cart-row {
+      display: flex;
+      gap: 12px;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .cart-thumb {
+      width: 70px;
+      height: 75px;
+      border-radius: 12px;
+      background: #e4ece2;
+      display: grid;
+      place-items: center
+    }
+
+    .cart-row h4 {
+      margin: 0 0 6px;
+      font-size: 14px
+    }
+
+    .qty {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 8px
+    }
+
+    .qty button {
+      width: 25px;
+      height: 25px;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 50%;
+      cursor: pointer
+    }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      margin: 22px 0
+    }
+
+    .empty {
+      color: var(--muted);
+      text-align: center;
+      padding: 50px 10px
+    }
+
+    .search-box {
+      position: fixed;
+      top: 114px;
+      right: 24px;
+      z-index: 50;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: 30px;
+      padding: 6px;
+      display: none
+    }
+
+    .search-box.open {
+      display: flex
+    }
+
+    .search-box input {
+      width: 260px;
+      border: 0;
+      outline: 0;
+      padding: 9px 13px
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: #0008;
+      z-index: 70;
+      display: none;
+      place-items: center;
+      padding: 20px
+    }
+
+    .modal.open {
+      display: grid
+    }
+
+    .modal-card {
+      position: relative;
+      background: #fff;
+      width: min(760px, 95vw);
+      max-height: 90vh;
+      overflow: auto;
+      border-radius: 25px;
+      padding: 25px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px
+    }
+
+    .modal-img {
+      min-height: 400px;
+      background: #e4ece2;
+      border-radius: 18px;
+      display: grid;
+      place-items: center
+    }
+    .modal-img .product-img{
+       width: 100%;
+      height: 100%;
+      background: transparent !important;
+    }
+
+    .modal h2 {
+      font: 600 34px "Playfair Display";
+      color: var(--forest);
+      margin: 8px 0
+    }
+
+    .modal p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px
+    }
+
+    .modal .close {
+      position: absolute;
+      margin-left: -5px
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%) translateY(30px);
+      background: var(--forest);
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 24px;
+      font-size: 13px;
+      opacity: 0;
+      pointer-events: none;
+      transition: .3s;
+      z-index: 100
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0)
+    }
+
+  .footer-grid > div:last-child a {
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    margin: 2.5px 0 !important;
+    padding: 0 !important;
+    line-height: 1.2 !important;
+  }
+
+  .footer-grid > div:last-child a i {
+    width: 18px !important;
+    min-width: 18px !important;
+    text-align: center !important;
+    font-size: 14px !important;
+  }
+
+  .footer-address {
+  font-size: 11px !important;
+  line-height: 1.5;
+  }
+
+
+    @media(max-width:900px) {
+      .menu {
+        display: none
+      }
+
+      .mobile-toggle {
+        display: block
+      }
+
+      .hero-copy {
+        grid-template-columns: 1fr;
+        padding-top: 55px;
+        padding-bottom: 55px
+      }
+
+      .hero-art {
+        height: 320px
+      }
+
+      .categories {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .products {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .about {
+        grid-template-columns: 1fr
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    @media(max-width:560px) {
+      .nav {
+        height: 66px
+      }
+
+      .actions .icon-btn:nth-child(1) {
+        display: none
+      }
+
+      .hero {
+        min-height: auto
+      }
+
+      .hero h1 {
+        font-size: 43px
+      }
+
+      .categories,
+      .products {
+        grid-template-columns: 1fr
+      }
+
+      .section {
+        padding: 55px 18px
+      }
+
+      .section-head {
+        align-items: start;
+        gap: 12px
+      }
+
+      .banner-inner {
+        display: block
+      }
+
+      .banner .btn {
+        margin-top: 22px
+      }
+
+      .points {
+        grid-template-columns: 1fr
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr
+      }
+
+      .modal-card {
+        grid-template-columns: 1fr
+      }
+
+      .modal-img {
+        min-height: 270px
+      }
+    }
+
+    .category-dropdown {
+  position: relative;
+  width: 160px;
+}
+
+.category-dropdown-btn {
+  width: 100%;
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #fff;
+  color: var(--forest);
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.12);
+  padding: 6px;
+  display: none;
+  z-index: 20;
+}
+
+.category-dropdown-menu.open {
+  display: block;
+}
+
+.category-dropdown-menu button {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--forest);
+  text-align: left;
+  padding: 9px 10px;
+  border-radius: 9px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.category-dropdown-menu button:hover {
+  background: var(--sage);
+}
+
+/* Checkout */
+#checkoutModal {
+  z-index: 80;
+}
+
+.checkout-card {
+  position: relative;
+  background: #fff;
+  width: min(680px, 95vw);
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 25px 70px rgba(0,0,0,.18);
+}
+
+.checkout-header {
+  margin-bottom: 25px;
+}
+
+.checkout-header h2 {
+  font: 600 32px "Playfair Display";
+  color: var(--forest);
+  margin: 7px 0;
+}
+
+.checkout-header p {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.checkout-field {
+  margin-bottom: 15px;
+}
+
+.checkout-field label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--forest);
+  margin-bottom: 6px;
+}
+
+.checkout-field input,
+.checkout-field textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 11px 12px;
+  outline: none;
+  background: #fff;
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.checkout-field input:focus,
+.checkout-field textarea:focus {
+  border-color: var(--forest);
+}
+
+.checkout-field textarea {
+  min-height: 85px;
+  resize: vertical;
+}
+
+.checkout-summary {
+  background: var(--cream);
+  border-radius: 14px;
+  padding: 16px;
+  margin: 5px 0 20px;
+}
+
+.checkout-summary h3 {
+  font: 600 18px "Playfair Display";
+  color: var(--forest);
+  margin: 0 0 12px;
+}
+
+.checkout-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 12px;
+  color: var(--muted);
+  padding: 6px 0;
+}
+
+.checkout-total {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  margin-top: 8px;
+  padding-top: 12px;
+  color: var(--forest);
+}
+
+.checkout-submit {
+  width: 100%;
+  gap: 8px;
+}
+
+.checkout-submit i {
+  font-size: 16px;
+}
+
+@media(max-width:560px) {
+  .checkout-card {
+    padding: 22px;
+  }
+
+  .checkout-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+.checkout-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: transparent;
+  color: var(--forest);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.checkout-close:hover {
+  background: var(--sage);
+}
+
+.product-close {
+  position: relative;
+  top: 18px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: transparent;
+  color: var(--forest);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.product-close:hover {
+  background: var(--sage);
+}
+/* blog css */
+/* BLOG SECTION */
+
+.blog-section {
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 42px;
+}
+
+.section-heading h2 {
+  margin: 8px 0 12px;
+  font-size: clamp(36px, 5vw, 58px);
+  color: var(--forest);
+}
+
+.section-heading p {
+  max-width: 620px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.blog-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(30, 60, 48, 0.06);
+}
+
+.blog-image {
+  width: 100%;
+  height: 330px;
+  overflow: hidden;
+  background: #eee;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-image img {
+  transform: scale(1.04);
+}
+
+.blog-content {
+  padding: 30px;
+}
+
+.blog-category {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #a57c35;
+}
+
+.blog-content h3 {
+  margin: 0 0 18px;
+  color: var(--forest);
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.blog-content h4 {
+  margin: 24px 0 8px;
+  color: var(--forest);
+  font-size: 17px;
+}
+
+.blog-content p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.blog-read-btn {
+  margin-top: 18px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 22px;
+  background: var(--forest);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.blog-read-btn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 800px) {
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-image {
+    height: 260px;
+  }
+
+  .blog-content {
+    padding: 24px;
+  }
+
+  .blog-content h3 {
+    font-size: 24px;
+  }
+}
+
+/* terms and condition */
+
+.brand-story {
+  padding-top: 80px;
+  padding-bottom: 90px;
+}
+
+.brand-story-header {
+  max-width: 700px;
+  margin-bottom: 45px;
+}
+
+.brand-story-header h2 {
+  margin: 8px 0 15px;
+  color: var(--forest);
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.1;
+}
+
+.brand-story-header p {
+  max-width: 600px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.brand-story-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+/* =========================
+   LEGAL POPUP
+========================= */
+
+.legal-modal {
+  position: fixed !important;
+  inset: 0 !important;
+
+  width: 100vw !important;
+  height: 100vh !important;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background: rgba(20, 35, 30, 0.70);
+
+  z-index: 999999 !important;
+
+  box-sizing: border-box;
+}
+
+.legal-modal.show {
+  display: flex !important;
+}
+
+
+/* POPUP BOX */
+
+.legal-modal-card {
+  position: relative;
+
+  width: min(850px, 100%);
+  max-height: 88vh;
+
+  overflow-y: auto;
+
+  background: #fff;
+
+  border-radius: 28px;
+
+  box-shadow: 0 30px 90px rgba(0, 0, 0, .25);
+
+  box-sizing: border-box;
+}
+
+
+/* CONTENT */
+
+.legal-modal-content {
+  padding: 55px;
+}
+
+.legal-modal-content h2 {
+  margin: 12px 0 35px;
+
+  color: var(--forest);
+
+  font-size: clamp(32px, 4vw, 48px);
+
+  line-height: 1.1;
+}
+
+.legal-modal-content h3 {
+  margin-top: 28px;
+  margin-bottom: 8px;
+
+  color: var(--forest);
+
+  font-size: 21px;
+}
+
+.legal-modal-content p {
+  margin: 0 0 16px;
+
+  color: var(--muted);
+
+  line-height: 1.8;
+}
+
+
+/* CLOSE BUTTON */
+
+.legal-modal-close {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f4f6f2;
+
+  color: var(--forest);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-size: 20px;
+
+  z-index: 10;
+}
+
+.legal-modal-close:hover {
+  background: var(--forest);
+  color: #fff;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .legal-modal {
+    padding: 15px;
+  }
+
+  .legal-modal-card {
+    max-height: 92vh;
+    border-radius: 20px;
+  }
+
+  .legal-modal-content {
+    padding: 40px 22px 30px;
+  }
+
+  .legal-modal-content h2 {
+    font-size: 32px;
+  }
+
+}
+
+/* side bar poup card show */
+
+/* .cart-thumb {
+  width: 75px;
+  height: 75px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5ef;
+}
+
+.cart-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+} */
+
+.cart-thumb {
+  width: 75px;
+  height: 75px;
+  flex-shrink: 0;
+
+  border-radius: 14px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f1f5ef;
+}
+
+.cart-thumb img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  display: block;
+}
+  </style>
+</head>
+
+<body>
+  <div class="announcement">Free shipping on orders over ₹999 &nbsp; • &nbsp; Pure. Botanical. Thoughtfully made.</div>
+
+  <header class="header">
+    <div class="nav">
+      <button class="icon-btn mobile-toggle" onclick="scrollToSection('shop')">☰</button>
+      <a class="logo" href="#home">AIYRA ORGANICS<small>NATURAL BEAUTY</small></a>
+      <nav class="menu">
+        <a href="#home" class="active">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#collections">Collections</a>
+        <a href="#about">Our Story</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="actions">
+        <button class="icon-btn" aria-label="Search" onclick="toggleSearch()">⌕</button>
+        <button class="icon-btn" aria-label="Account">♙</button>
+        <button class="icon-btn" aria-label="Cart" onclick="toggleCart()">🛍<span class="badge"
+            id="cartCount">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <div id="searchBox" class="search-box">
+    <input id="searchInput" placeholder="Search products..." oninput="searchProducts(this.value)">
+    <button class="icon-btn" onclick="toggleSearch()">×</button>
+  </div>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <div>
+          <span class="eyebrow">Botanical beauty, elevated</span>
+          <h1>Nature's ritual for your everyday glow.</h1>
+          <p>Discover thoughtfully crafted herbal essentials inspired by nature and designed for modern self-care.</p>
+          <div class="ctas"><a class="btn primary" href="#shop">Shop Bestsellers</a><a class="btn light"
+              href="#about">Discover Our Story</a></div>
+        </div>
+        <div class="hero-art">
+          <div class="bottle">
+            <div class="label"><b>Aiyra<br>Organics</b><span>BOTANICAL CARE</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="collections">
+      <div class="section-head">
+        <div><span class="eyebrow">Explore</span>
+          <h2>Shop by ritual</h2>
+          <p>Simple botanical care for every part of your routine.</p>
+        </div><a class="link" href="#shop">View all →</a>
+      </div>
+      <div class="categories">
+        <a class="cat" href="#shop" onclick="filterCategory('Hair Care')">
+          <div class="shape"></div><strong>Hair Care</strong><span>Roots to radiant lengths</span>
+        </a>
+        <a class="cat" href="#shop" onclick="filterCategory('Skin Care')">
+          <div class="shape"></div><strong>Skin Care</strong><span>Glow, nourish & protect</span>
+        </a>
+        <a class="cat" href="#shop" onclick="filterCategory('Body Care')">
+          <div class="shape"></div><strong>Body Care</strong><span>Daily rituals of care</span>
+        </a>
+        <a class="cat" href="#shop" onclick="filterCategory('Wellness')">
+          <div class="shape"></div><strong>Wellness</strong><span>Inside-out balance</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="section-head">
+        <div><span class="eyebrow">Curated for you</span>
+          <h2 id="shopTitle">Bestsellers</h2>
+          <p id="shopSub">Our most-loved herbal essentials.</p>
+        </div>
+    <div class="category-dropdown" id="categoryDropdown">
+      <button type="button" class="category-dropdown-btn" onclick="toggleCategoryDropdown()">
+        <span id="categorySelected">All categories</span>
+         <i class="fa-solid fa-chevron-down"></i>
+      </button>
+
+      <div class="category-dropdown-menu" id="categoryMenu">
+        <button type="button" onclick="selectCategory('All', 'All categories')">All categories</button>
+        <button type="button" onclick="selectCategory('Hair Care', 'Hair Care')">Hair Care</button>
+        <button type="button" onclick="selectCategory('Skin Care', 'Skin Care')">Skin Care</button>
+        <button type="button" onclick="selectCategory('Body Care', 'Body Care')">Body Care</button>
+        <button type="button" onclick="selectCategory('Wellness', 'Wellness')">Wellness</button>
+      </div>
+    </div>
+      </div>
+      <div class="products" id="products"></div>
+    </section>
+
+    <section class="banner">
+      <div class="banner-inner">
+        <div><span class="eyebrow" style="color:#d8bd83">A little luxury, naturally</span>
+          <h2>Build your botanical ritual.</h2>
+          <p>Save 10% when you choose any 3 products from our collection.</p>
+        </div><a class="btn" href="#shop">Explore Collection</a>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="about-card"><span class="eyebrow">Our philosophy</span>
+        <h2>Rooted in nature. Made for you.</h2>
+        <p>Aiyra Organics brings together the timeless wisdom of botanicals with a modern, elegant approach to everyday
+          personal care. Every ritual is designed to feel simple, sensorial and intentional.</p>
+        <div class="points">
+          <div class="point"><strong>Botanical first</strong><span>Inspired by plant-based ingredients and traditional
+              rituals.</span></div>
+          <div class="point"><strong>Thoughtfully made</strong><span>Designed around quality, consistency and daily
+              usability.</span></div>
+          <div class="point"><strong>Everyday luxury</strong><span>Premium-feeling care without unnecessary
+              complexity.</span></div>
+          <div class="point"><strong>Gentle rituals</strong><span>Simple routines that fit beautifully into modern
+              life.</span></div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="bottle" style="transform:scale(1.05) rotate(-5deg)">
+          <div class="label"><b>Aiyra<br>Organics</b><span>PURE BOTANICALS</span></div>
+        </div>
+      </div>
+    </section>
+     <!-- BLOG SECTION -->
+    <section class="section blog-section" id="blog">
+
+      <div class="section-heading">
+        <span class="eyebrow">From the journal</span>
+        <h2>Beauty rituals, naturally.</h2>
+        <p>
+          Simple insights and thoughtful rituals for healthier skin,
+          stronger hair and everyday wellness.
+        </p>
+      </div>
+
+      <div class="blog-grid">
+
+        <!-- BLOG 1 -->
+        <article class="blog-card">
+
+          <div class="blog-image">
+            <img src="assets/blog1.png"
+                alt="Skincare and glowing skin">
+          </div>
+
+          <div class="blog-content">
+
+            <span class="blog-category">SKIN CARE</span>
+
+            <h3>
+              Achieving Glowing, Clearer, and Fairer Skin:
+              A Comprehensive Guide
+            </h3>
+
+            <p>
+              Achieving glowing, clearer, and fairer skin is a goal that many
+              aspire to. The essence of beautiful skin lies in a proper skincare
+              routine, a healthy lifestyle, and understanding what works best
+              for your skin type.
+            </p>
+
+            <h4>Essential Skincare Practices</h4>
+
+            <p>
+              The foundation of clear and radiant skin begins with a robust
+              skincare regimen. Select products that suit your skin type and
+              maintain a consistent routine of cleansing, moisturizing and
+              gentle exfoliation.
+            </p>
+
+            <h4>Nutrition and Hydration for Healthy Skin</h4>
+
+            <p>
+              A balanced diet rich in fruits, vegetables, vitamins and
+              antioxidants supports skin health. Adequate hydration also helps
+              maintain the skin's natural moisture balance.
+            </p>
+
+            <h4>Protecting Your Skin from Damage</h4>
+
+            <p>
+              Sun protection is an essential part of skincare. Using a
+              broad-spectrum sunscreen with at least SPF 30 can help protect
+              your skin from UV-related damage and premature aging.
+            </p>
+
+            <h4>Conclusion</h4>
+
+            <p>
+              Achieving healthy-looking skin is a journey that requires
+              consistency and attention to both external and internal factors.
+              Embrace the process and give your skin time to thrive.
+            </p>
+
+            <!-- <button class="blog-read-btn"
+                    onclick="openBlog(1)">
+              Read Article
+              <i class="fa-solid fa-arrow-right"></i>
+            </button> -->
+
+          </div>
+        </article>
+
+
+        <!-- BLOG 2 -->
+        <article class="blog-card">
+
+          <div class="blog-image">
+            <img src="assets/blog2.png"
+                alt="Healthy shiny hair">
+          </div>
+
+          <div class="blog-content">
+
+            <span class="blog-category">HAIR CARE</span>
+
+            <h3>
+              Achieve Natural, Shiny, and Strong Hair:
+              Essential Tips and Techniques
+            </h3>
+
+            <p>
+              Healthy hair is a reflection of overall wellness. A balanced
+              lifestyle, proper nutrition and natural hair-care rituals can
+              help support stronger, shinier and healthier-looking hair.
+            </p>
+
+            <h4>Diet and Nutrition</h4>
+
+            <p>
+              Essential nutrients such as biotin, vitamin E and omega-3 fatty
+              acids contribute to healthy hair. Fish, nuts, seeds, leafy
+              vegetables and fruits can all form part of a balanced diet.
+            </p>
+
+            <h4>Natural Treatments for Lustrous Hair</h4>
+
+            <p>
+              Natural oils such as coconut, argan and olive oil can help
+              condition the hair and improve its appearance. Aloe vera can
+              also provide a soothing and moisturizing hair-care ritual.
+            </p>
+
+            <h4>Hair Care Practices</h4>
+
+            <p>
+              Regular trimming, reducing excessive heat styling and using
+              gentle hair-care products can help maintain the natural
+              moisture balance of your hair.
+            </p>
+
+            <h4>Conclusion</h4>
+
+            <p>
+              Healthy hair comes from a combination of nutrition, natural
+              treatments and consistent care. Small daily habits can create
+              beautiful long-term results.
+            </p>
+
+            <!-- <button class="blog-read-btn"
+                    onclick="openBlog(2)">
+              Read Article
+              <i class="fa-solid fa-arrow-right"></i>
+            </button> -->
+
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+<!-- Terms and Conditions / Privacy Policy -->
+<section class="section brand-story" id="brandStory">
+
+  <div class="brand-story-header">
+    <span class="eyebrow">Legal</span>
+
+    <h2>Our policies.</h2>
+
+    <p>
+      Clear and simple information about your experience with
+      AIYRA ORGANICS.
+    </p>
+  </div>
+
+  <div class="brand-story-grid">
+
+    <!-- TERMS -->
+    <div class="brand-story-card">
+
+      <div class="brand-story-content">
+        <span class="blog-category">LEGAL</span>
+
+        <h3>Terms and Conditions</h3>
+
+        <p>
+          Please read our terms and conditions before using our
+          website or placing an order.
+        </p>
+
+        <button class="blog-read-btn" onclick="openBrandStory(1)">
+          Terms and Conditions
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+    </div>
+
+
+    <!-- PRIVACY -->
+    <div class="brand-story-card">
+
+      <div class="brand-story-content">
+        <span class="blog-category">PRIVACY</span>
+
+        <h3>Privacy Policy</h3>
+
+        <p>
+          Learn how AIYRA ORGANICS collects, uses and protects
+          your information.
+        </p>
+
+        <button class="blog-read-btn" onclick="openBrandStory(2)">
+          Privacy Policy
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- LEGAL POPUP -->
+<div class="legal-modal"
+     id="brandStoryModal"
+     onclick="if(event.target === this) closeBrandStory()">
+
+  <div class="legal-modal-card">
+
+    <button class="legal-modal-close"
+            onclick="closeBrandStory()"
+            aria-label="Close">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="legal-modal-content">
+
+      <span class="eyebrow" id="brandStoryCategory"></span>
+
+      <h2 id="brandStoryTitle"></h2>
+
+      <div id="brandStoryBody"></div>
+
+    </div>
+
+  </div>
+
+</div>
+
+    <section class="newsletter" id="contact"><span class="eyebrow">Stay in the ritual</span>
+      <h2>Join the Aiyra Organics - Herbals Luxe circle</h2>
+      <p>New launches, rituals and exclusive offers — delivered occasionally.</p>
+      <form class="form" onsubmit="subscribe(event)"><input type="email" required
+          placeholder="Your email address"><button>Subscribe</button></form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <!-- <div>
+        <div class="footer-logo">AIYRA ORGANICS</div>
+        <p>Premium herbal beauty and wellness for modern rituals. Crafted with intention, inspired by nature.</p>
+        <p class="footer-address">
+        📍 123 Main Street, Mumbai, Maharashtra 400001
+      </p>
+      </div> -->
+      <div>
+    <div class="footer-logo">AIYRA ORGANICS</div>
+
+    <p>
+      Premium herbal beauty and wellness for modern rituals.
+      Crafted with intention, inspired by nature.
+    </p>
+
+    <!-- <p class="footer-address">
+      <i class="fa-solid fa-location-dot"></i>
+      Prime plaza, Pranami Mandir Rd, Ward 40, besides siyara, Punjabi Para, Siliguri, West Bengal 734001
+    </p> -->
+    <p class="footer-address">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>
+        Prime Plaza, Pranami Mandir Rd, Ward 40, besides Siyara,<br>
+        Punjabi Para, Siliguri, West Bengal 734001
+      </span>
+    </p>
+
+    <p class="footer-address">
+      <i class="fa-solid fa-phone"></i>
+      <span>+91 - 98836 25166</span>
+    </p>
+  </div>
+      <div>
+        <h4>Shop</h4><a href="#shop" onclick="filterCategory('Hair Care')">Hair Care</a></br><a href="#shop"
+          onclick="filterCategory('Skin Care')">Skin Care</a></br><a href="#shop"
+          onclick="filterCategory('Body Care')">Body Care</a></br><a href="#shop"
+          onclick="filterCategory('Wellness')">Wellness</a>
+      </div>
+      <div>
+        <h4>Company</h4><a href="#about">Our Story</a></br><a href="#contact">Contact</a></br><a
+          href="#">Free Shipping*</a>
+      </div>
+
+      <div>
+      <h4>Connect</h4>
+
+      <a href="https://www.instagram.com/aiyra_organics/" target="_blank" rel="noopener">
+        <i class="fa-brands fa-instagram"></i>
+        Instagram
+      </a>
+
+      <a href="https://www.facebook.com/aiyraorganics/" target="_blank" rel="noopener">
+        <i class="fa-brands fa-facebook-f"></i>
+        Facebook
+      </a>
+
+      <a href="https://wa.me/9883625166" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i>
+        WhatsApp
+      </a>
+
+      <a href="mailto:support@aiyraorganics.com">
+        <i class="fa-solid fa-envelope"></i>
+        Email us
+      </a>
+    </div>
+    </div>
+    <div class="copyright">© 2026 Aiyra Organics. All rights reserved.</div>
+  </footer>
+
+  <div class="overlay" id="cartOverlay" onclick="if(event.target===this)toggleCart()">
+    <aside class="drawer"><button class="close" onclick="toggleCart()">×</button>
+      <h2>Your bag</h2>
+      <div id="cartItems">
+        
+      </div>
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="btn primary"
+        style="width:100%" onclick="checkout()">
+        Proceed to Checkout
+      </button>
+    </aside>
+  </div>
+
+  <!-- Checkout Modal -->
+<div class="modal" id="checkoutModal">
+  <div class="checkout-card">
+
+    <!-- <button class="close" onclick="closeCheckout()">×</button> -->
+     <button class="close checkout-close" onclick="closeCheckout()" aria-label="Close checkout">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="checkout-header">
+      <span class="eyebrow">Complete your order</span>
+      <h2>Checkout</h2>
+      <p>Enter your details and we'll confirm your order on WhatsApp.</p>
+    </div>
+
+    <form id="checkoutForm" onsubmit="placeOrder(event)">
+
+      <div class="checkout-grid">
+
+        <div class="checkout-field">
+          <label>Full Name *</label>
+          <input type="text" id="customerName" required placeholder="Your name">
+        </div>
+
+        <div class="checkout-field">
+          <label>Mobile Number *</label>
+          <input type="tel" id="customerPhone" required
+                 placeholder="9876543210"
+                 pattern="[0-9]{10}">
+        </div>
+
+        <div class="checkout-field">
+          <label>Email *</label>
+          <input type="email" id="customerEmail" required
+                 placeholder="your@email.com">
+        </div>
+
+        <div class="checkout-field">
+          <label>Pincode *</label>
+          <input type="text" id="customerPincode" required
+                 placeholder="734001"
+                 maxlength="6"
+                 pattern="[0-9]{6}">
+        </div>
+
+      </div>
+
+      <div class="checkout-field">
+        <label>Full Address *</label>
+        <textarea id="customerAddress" required
+                  placeholder="House / Flat / Street / Area"></textarea>
+      </div>
+
+      <div class="checkout-grid">
+
+        <div class="checkout-field">
+          <label>City *</label>
+          <input type="text" id="customerCity" required
+                 placeholder="Siliguri">
+        </div>
+
+        <div class="checkout-field">
+          <label>State *</label>
+          <input type="text" id="customerState" required
+                 placeholder="West Bengal">
+        </div>
+
+      </div>
+
+      <div class="checkout-summary">
+        <h3>Order Summary</h3>
+        <div id="checkoutItems"></div>
+
+        <div class="checkout-total">
+          <span>Total</span>
+          <strong id="checkoutTotal">₹0</strong>
+        </div>
+      </div>
+
+      <button type="submit" class="btn primary checkout-submit">
+        <i class="fa-brands fa-whatsapp"></i>
+        Place Order on WhatsApp
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+  <div class="modal" id="productModal" onclick="if(event.target===this)closeProduct()">
+    <div class="modal-card">
+      <!-- <button class="close" onclick="closeProduct()">×</button> -->
+       <button class="close product-close" onclick="closeProduct()" aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-img" id="modalImg"></div>
+      <div><span class="eyebrow" id="modalCat"></span>
+        <h2 id="modalName"></h2>
+        <div class="price" id="modalPrice"></div>
+        <p id="modalDesc"></p><button class="btn primary" id="modalAdd">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const products = [
+  { id: 1, img: "assets/herbal_hair_oil.jpg", name: "Herbal Hair Oil", cat: "Hair Care", price: 599, old: 699, desc: "Ayurvedic,Organic Herbal Hair oil for Hairfall,for age groups hair loss (Wavy)", tone: "green" },
+
+  { id: 2, img: "assets/herbal_hair_serum.png", name: "Rosemary Scalp Serum", cat: "Hair Care", price: 599, old: 649, desc: "A lightweight scalp-care serum for a refreshed, balanced-feeling routine.", tone: "green" },
+
+  { id: 3, img: "assets/herbal_hairfall_shampoo.jpg", name: "Herbal Anti-Hairfall Shampoo", cat: "Hair Care", price: 599, old: 649, desc: "A rich botanical mask designed to leave hair feeling soft, smooth and cared for. Organic,Herbal Anti-Hairfall Shampoo | Hair loss treatment", tone: "green" },
+
+  { id: 4, img: "assets/aloe-neem-shampoo.jpg", name: "Herbal Hair Conditioner", cat: "Hair Care", price: 599, old: 649, desc: "A gentle everyday cleansing ritual with a fresh herbal character.", tone: "green" },
+
+  { id: 5, img: "assets/herbal_face_cream.png", name: "Herbal Face Cream & Moisturiser", cat: "Skin Care", price: 599, old: 699, desc: "A luxurious facial oil inspired by classic botanical beauty traditions.", tone: "pink" },
+
+  { id: 6, img: "assets/herbal_face_scrub.png", name: "Herbal Face Scrub", cat: "Skin Care", price: 599, old: 699, desc: "A silky daily moisturizer for a soft, comfortable and radiant-feeling finish.", tone: "pink" },
+
+  { id: 7, img: "assets/neem-tulsi-face-wash.jpg", name: "Herbal Face Wash", cat: "Skin Care", price: 599, old: 699, desc: "A refreshing botanical cleanser for a clean, balanced-feeling routine.", tone: "green" },
+
+  { id: 8, img: "assets/rose-water-mist.jpg", name: "Herbal Suns Cream", cat: "Skin Care", price: 599, old: 699, desc: "A fine botanical mist to refresh your skin throughout the day.", tone: "pink" },
+
+];
+    let activeCategory = "All", cart = JSON.parse(localStorage.getItem("hl-cart") || "[]"), liked = new Set(JSON.parse(localStorage.getItem("hl-liked") || "[]"));
+
+    function money(n) { return "₹" + n.toLocaleString("en-IN") }
+    function bottleHTML(p, large = false) {
+      return `
+        <div class="product-img ${p.tone}"
+            onclick="openProduct(${p.id})"
+            style="cursor:pointer;${large ? 'height:100%;' : ''}">
+
+          ${
+            p.img
+            ? `
+              <img src="${p.img}"
+                  alt="${p.name}"
+                  style="width:100%;height:100%;object-fit:cover;display:block;${large ? 'transform:scale(1.1);' : ''}"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            `
+            : ''
+          }
+
+          <div class="mini-bottle"
+              style="${large ? 'transform:scale(1.45);' : ''}${p.img ? 'display:none;' : ''}">
+            <div class="mini-label">
+              ${p.name.replace(/ /g,"<br>").slice(0,48)}
+            </div>
+          </div>
+
+        </div>
+      `;
+    }
+
+    function renderProducts(list = products) {
+      const el = document.getElementById("products");
+          el.innerHTML = list.map(p => `<article class="product">
+      ${bottleHTML(p)}
+      <button class="wish ${liked.has(p.id) ? 'liked' : ''}" onclick="toggleLike(${p.id})">${liked.has(p.id) ? '♥' : '♡'}</button>
+      <div class="product-info"><span class="catname">${p.cat}</span><h3>${p.name}</h3><div class="price">${money(p.price)} <span class="old">${money(p.old)}</span></div><div class="rating">★★★★★ <span style="color:#8a918b"> 4.8</span></div>
+      <div style="display:flex;gap:7px;margin-top:10px"><button class="btn primary" style="padding:9px 14px" onclick="addToCart(${p.id})">Add to Cart</button>
+        </div></div>
+    </article>`).join("");
+    }
+    function filterCategory(cat) {
+      activeCategory = cat || "All"; document.getElementById("categoryFilter").value = activeCategory;
+      document.getElementById("shopTitle").textContent = activeCategory === "All" ? "Bestsellers" : activeCategory;
+      document.getElementById("shopSub").textContent = activeCategory === "All" ? "Our most-loved herbal essentials." : `Explore our ${activeCategory.toLowerCase()} collection.`;
+      renderProducts(activeCategory === "All" ? products : products.filter(p => p.cat === activeCategory));
+    }
+    function searchProducts(q) {
+      const x = q.trim().toLowerCase(); renderProducts(products.filter(p => (activeCategory === "All" || p.cat === activeCategory) && (!x || p.name.toLowerCase().includes(x) || p.cat.toLowerCase().includes(x))));
+    }
+    function toggleLike(id) { liked.has(id) ? liked.delete(id) : liked.add(id); localStorage.setItem("hl-liked", JSON.stringify([...liked])); renderProducts(activeCategory === "All" ? products : products.filter(p => p.cat === activeCategory)); }
+    function addToCart(id) { const p = products.find(x => x.id === id), item = cart.find(x => x.id === id); item ? item.qty++ : cart.push({ id, qty: 1 }); saveCart(); toast(p.name + " added to your bag"); }
+    function saveCart() { 
+      localStorage.setItem("hl-cart", JSON.stringify(cart)); 
+      document.getElementById("cartCount").textContent = cart.reduce((s, x) => s + x.qty, 0); 
+      renderCart(); 
+    }
+    function renderCart() {
+      const el = document.getElementById("cartItems");
+
+      if (!cart.length) {
+        el.innerHTML =
+          '<div class="empty">Your bag is waiting for a little botanical luxury.</div>';
+
+        document.getElementById("cartTotal").textContent = "₹0";
+        return;
+      }
+
+      el.innerHTML = cart.map(x => {
+
+        let p = products.find(y => y.id === x.id);
+
+        return `
+          <div class="cart-row">
+
+            <div class="cart-thumb">
+
+              ${
+                p.img
+                  ? `
+                    <img
+                      src="${p.img}"
+                      alt="${p.name}"
+                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                    >
+
+                          <div class="cart-fallback" style="display:none;">
+              <div class="mini-bottle ${p.tone}" style="transform:scale(.35);">
+                <div class="mini-label">${p.name}</div>
+              </div>
+            </div>
+          `
+          : `
+            <div class="cart-fallback">
+              <div class="mini-bottle ${p.tone}" style="transform:scale(.35);">
+                <div class="mini-label">${p.name}</div>
+              </div>
+            </div>
+          `
+              }
+
+            </div>
+
+            <div style="flex:1">
+
+              <h4>${p.name}</h4>
+
+              <div>${money(p.price)}</div>
+
+              <div class="qty">
+
+                <button onclick="changeQty(${p.id},-1)">
+                  −
+                </button>
+
+                <span>${x.qty}</span>
+
+                <button onclick="changeQty(${p.id},1)">
+                  +
+                </button>
+
+                <button
+                  style="border:0;background:none;color:#a44"
+                  onclick="removeCart(${p.id})">
+                  Remove
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+        `;
+      }).join("");
+
+      document.getElementById("cartTotal").textContent =
+        money(
+          cart.reduce(
+            (s, x) =>
+              s + products.find(p => p.id === x.id).price * x.qty,
+            0
+          )
+        );
+}
+   
+    function changeQty(id, d) {
+       let x = cart.find(a => a.id === id); 
+       if (x) { 
+        x.qty += d; 
+        if (x.qty <= 0)
+         cart = cart.filter(a => a.id !== id) 
+        } saveCart() 
+      }
+    function removeCart(id) {
+       cart = cart.filter(x => x.id !== id);
+        saveCart() 
+      }
+    function toggleCart() {
+       document.getElementById("cartOverlay").classList.toggle("open") 
+      }
+    // function checkout() { if (!cart.length) { toast("Your bag is empty"); return } toast("Checkout is ready for integration"); }
+    function openProduct(id) { 
+      const p = products.find(x => x.id === id); document.getElementById("modalImg").innerHTML = bottleHTML(p, true); 
+      document.getElementById("modalCat").textContent = p.cat; 
+      document.getElementById("modalName").textContent = p.name; 
+      document.getElementById("modalPrice").innerHTML = money(p.price) + ' <span class="old">' + money(p.old) + '</span>'; 
+      document.getElementById("modalDesc").textContent = p.desc; 
+      document.getElementById("modalAdd").onclick = () => addToCart(id); 
+      document.getElementById("productModal").classList.add("open") 
+    }
+    function closeProduct() {
+       document.getElementById("productModal").classList.remove("open") 
+      }
+    function toggleSearch() {
+       document.getElementById("searchBox").classList.toggle("open");
+        if (document.getElementById("searchBox").classList.contains("open")) 
+        document.getElementById("searchInput").focus() 
+      }
+    function subscribe(e) {
+       e.preventDefault(); e.target.reset(); toast("Thank you for joining Aiyra Organics"); 
+      }
+    function toast(msg) {
+       let t = document.getElementById("toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(window.__toast); window.__toast = setTimeout(() => t.classList.remove("show"), 2300) 
+      }
+    function scrollToSection(id) {
+       document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }) 
+      }
+      document.addEventListener("keydown", e => { if (e.key === "Escape") { 
+        closeProduct(); 
+      document.getElementById("cartOverlay").classList.remove("open") 
+    } })
+    filterCategory(new URLSearchParams(location.search).get("category") || "All"); 
+    saveCart();
+
+    function toggleCategoryDropdown(){
+    document.getElementById("categoryMenu").classList.toggle("open");
+  }
+
+  function selectCategory(value, label){
+    document.getElementById("categorySelected").textContent = label;
+    document.getElementById("categoryMenu").classList.remove("open");
+    filterCategory(value);
+  }
+
+  document.addEventListener("click", function(e){
+    const dropdown = document.getElementById("categoryDropdown");
+
+    if (!dropdown.contains(e.target)) {
+      document.getElementById("categoryMenu").classList.remove("open");
+    }
+  });
+
+function filterCategory(cat){
+  activeCategory=cat||"All";
+
+  document.getElementById("categorySelected").textContent =
+    activeCategory === "All" ? "All categories" : activeCategory;
+
+  document.getElementById("shopTitle").textContent =
+    activeCategory==="All" ? "Bestsellers" : activeCategory;
+
+  document.getElementById("shopSub").textContent =
+    activeCategory==="All"
+      ? "Our most-loved herbal essentials."
+      : `Explore our ${activeCategory.toLowerCase()} collection.`;
+
+  renderProducts(
+    activeCategory==="All"
+      ? products
+      : products.filter(p=>p.cat===activeCategory)
+  );
+}
+
+function checkout(){
+
+  if(!cart.length){
+    toast("Your bag is empty");
+    return;
+  }
+
+  const modal = document.getElementById("checkoutModal");
+  const items = document.getElementById("checkoutItems");
+
+  items.innerHTML = cart.map(x => {
+    const p = products.find(y => y.id === x.id);
+    return `
+      <div class="checkout-item">
+        <span>${p.name} × ${x.qty}</span>
+        <strong>${money(p.price * x.qty)}</strong>
+      </div>
+    `;
+  }).join("");
+
+  const total = cart.reduce(
+    (sum, x) => sum + products.find(p => p.id === x.id).price * x.qty,
+    0
+  );
+
+  document.getElementById("checkoutTotal").textContent = money(total);
+
+  modal.classList.add("open");
+}
+
+function closeCheckout(){
+  document.getElementById("checkoutModal").classList.remove("open");
+}
+
+function placeOrder(e) {
+  e.preventDefault();
+
+  if (!cart.length) {
+    toast("Your bag is empty");
+    closeCheckout();
+    return;
+  }
+
+  const name = document.getElementById("customerName").value.trim();
+  const phone = document.getElementById("customerPhone").value.trim();
+  const email = document.getElementById("customerEmail").value.trim();
+  const address = document.getElementById("customerAddress").value.trim();
+  const city = document.getElementById("customerCity").value.trim();
+  const state = document.getElementById("customerState").value.trim();
+  const pincode = document.getElementById("customerPincode").value.trim();
+
+  let message = `NEW ORDER - AIYRA ORGANICS
+
+CUSTOMER DETAILS
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Address: ${address}
+City: ${city}
+State: ${state}
+Pincode: ${pincode}
+
+ORDER DETAILS
+`;
+
+  cart.forEach(x => {
+    const p = products.find(y => y.id === x.id);
+
+    if (p) {
+      const itemTotal = p.price * x.qty;
+
+      message += `• ${p.name} × ${x.qty} - ${money(itemTotal)}
+`;
+    }
+  });
+
+  const total = cart.reduce((sum, x) => {
+    const p = products.find(p => p.id === x.id);
+    return sum + (p ? p.price * x.qty : 0);
+  }, 0);
+
+  message += `
+TOTAL: ${money(total)}`;
+
+  const companyWhatsApp = "919883625166";
+
+  const whatsappURL =
+    `https://wa.me/${companyWhatsApp}?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappURL, "_blank");
+
+  closeCheckout();
+}
+
+const brandStories = {
+
+  1: {
+    category: "TERMS & CONDITIONS",
+    title: "Terms and Conditions",
+
+    content: `
+      <h3>Introduction</h3>
+
+      <p>
+        Welcome to AIYRA ORGANICS. By accessing and using this website,
+        you agree to comply with and be bound by these Terms and Conditions.
+      </p>
+
+      <h3>Use of Website</h3>
+
+      <p>
+        You agree to use this website only for lawful purposes and in a
+        manner that does not interfere with the operation of the website
+        or the experience of other users.
+      </p>
+
+      <h3>Products and Orders</h3>
+
+      <p>
+        We make every effort to ensure that product descriptions,
+        images, prices and availability are accurate. However, there may
+        occasionally be minor differences between the website and the
+        actual product.
+      </p>
+
+      <p>
+        Once an order is placed, the information provided by the customer
+        should be accurate and complete so that the order can be processed
+        correctly.
+      </p>
+
+      <h3>Pricing</h3>
+
+      <p>
+        Product prices displayed on the website are subject to change
+        without prior notice. We reserve the right to correct pricing
+        errors where necessary.
+      </p>
+
+      <h3>Intellectual Property</h3>
+
+      <p>
+        All website content, including text, images, logos, graphics and
+        designs, belongs to AIYRA ORGANICS unless otherwise stated and
+        should not be reproduced without permission.
+      </p>
+
+      <h3>Contact</h3>
+
+      <p>
+        If you have any questions regarding these Terms and Conditions,
+        please contact AIYRA ORGANICS using the contact details provided
+        on our website.
+      </p>
+    `
+  },
+
+
+  2: {
+    category: "PRIVACY POLICY",
+    title: "Privacy Policy",
+
+    content: `
+      <h3>Introduction</h3>
+
+      <p>
+        At AIYRA ORGANICS, we respect your privacy and are committed to
+        protecting the information you provide when using our website.
+      </p>
+
+      <h3>Information We Collect</h3>
+
+      <p>
+        When you place an order or contact us, we may collect information
+        such as your name, phone number, email address and delivery
+        address.
+      </p>
+
+      <h3>How We Use Your Information</h3>
+
+      <p>
+        The information you provide may be used to process and deliver
+        your orders, communicate with you regarding your order and provide
+        customer support.
+      </p>
+
+      <h3>Protection of Information</h3>
+
+      <p>
+        We take reasonable steps to protect the personal information
+        provided by our customers and to prevent unauthorized access,
+        misuse or disclosure.
+      </p>
+
+      <h3>Third-Party Services</h3>
+
+      <p>
+        Certain services used by the website may process information
+        required to complete transactions, communication or delivery.
+      </p>
+
+      <h3>Changes to This Policy</h3>
+
+      <p>
+        AIYRA ORGANICS may update this Privacy Policy from time to time.
+        Any changes will be reflected on this page.
+      </p>
+
+      <h3>Contact Us</h3>
+
+      <p>
+        If you have questions about this Privacy Policy or how your
+        information is handled, please contact us through the contact
+        information available on our website.
+      </p>
+    `
+  }
+
+};
+
+
+function openBrandStory(id) {
+
+  const content = brandStories[id];
+
+  if (!content) return;
+
+  document.getElementById("brandStoryCategory").textContent =
+    content.category;
+
+  document.getElementById("brandStoryTitle").textContent =
+    content.title;
+
+  document.getElementById("brandStoryBody").innerHTML =
+    content.content;
+
+  document.getElementById("brandStoryModal").classList.add("show");
+
+  document.body.style.overflow = "hidden";
+}
+
+
+function closeBrandStory() {
+
+  document.getElementById("brandStoryModal").classList.remove("show");
+
+  document.body.style.overflow = "";
+}
+
+  /* =======================================================
+     SCAN & CONNECT — QR code pointing to the /explore page
+     =======================================================
+
+     >>> REPLACE THE DOMAIN BELOW WITH YOUR REAL ONE <<<
+     A QR code must contain a FULL absolute URL. A relative
+     path like "/explore" will NOT open on a phone scanner.
+     ======================================================= */
+  var EXPLORE_URL = "https://aiyraorganics.com/explore"; // <-- CHANGE THIS
+
+  function renderExploreQR() {
+    var box = document.getElementById("exploreQr");
+    if (!box) return;
+
+    /* wait for the QR library if it is still loading */
+    if (typeof QRCode === "undefined") {
+      setTimeout(renderExploreQR, 120);
+      return;
+    }
+
+    box.innerHTML = "";
+    new QRCode(box, {
+      text: EXPLORE_URL,
+      width: 184,
+      height: 184,
+      colorDark: "#214536",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", renderExploreQR);
+  } else {
+    renderExploreQR();
+  }
+
+  </script>
+</body>
+
+</html>
